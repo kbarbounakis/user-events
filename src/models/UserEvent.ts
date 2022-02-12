@@ -7,9 +7,33 @@ class UserEvent extends DataObject {
      */
     public id?: string;
     /**
+     * An additional type for the item
+     */
+    public additionalType?: string;
+    /**
+     * An additional type for the item
+     */
+    public sameAs?: string;
+    /**
+     * The name of the sender of this event
+     */
+    public sender?: string;
+    /**
      * The name of the recipient - user or group- that is going to be notified by this event
      */
     public recipient?: string;
+    /**
+    * The name of the sender of this event
+    */
+    public subject?: string;
+    /**
+   * The name of the sender of this event
+   */
+    public body?: string;
+    /**
+     * A URL formatted string which represents the subject matter of this item
+     */
+    public about?: string;
     /**
      * The identifier of the client application which may be the target of this event
      */
@@ -19,7 +43,15 @@ class UserEvent extends DataObject {
      */
     public scope?: string;
     /**
-     * The date on which this item was created.
+     * The date/time at which the event was sent to the recipient 
+     */
+    public dateSent?: Date;
+    /**
+     * The date/time at which this event will be expired
+     */
+    public expiresAt?: Date;
+    /**
+     * The date/time at which this item was created
      */
     public dateCreated?: Date;
 
