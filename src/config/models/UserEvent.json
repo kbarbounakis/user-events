@@ -1,0 +1,55 @@
+
+{
+    "$schema": "https://themost-framework.github.io/themost/models/2018/2/schema.json",
+    "@id": "https://themost.io/schemans/UserEvent",
+    "name": "UserEvent",
+    "title": "UserEvents",
+    "hidden": false,
+    "sealed": false,
+    "abstract": false,
+    "version": "0.1",
+    "caching": "none",
+    "fields": [
+        {
+            "@id": "https://themost.io/schemas/id",
+            "name": "id",
+            "title": "ID",
+            "description": "The identifier of this item",
+            "type": "Guid",
+            "primary": true
+        },
+        {
+            "@id": "https://themost.io/schemas/user",
+            "name": "recipient",
+            "title": "The name of the recipient - user or group- that is going to be notified by this event",
+            "type": "Text",
+            "size": 64,
+            "indexed": true
+        },
+        {
+            "@id": "https://themost.io/schemas/client",
+            "name": "client",
+            "title": "A string which represents the identifier of the client application which may be the target of this event",
+            "type": "Text",
+            "size": 128,
+            "indexed": true
+        },
+        {
+            "@id": "https://themost.io/schemas/scope",
+            "name": "scope",
+            "title": "A string which represents the scope of this user event",
+            "type": "Text",
+            "size": 64,
+            "indexed": true
+        },
+        {
+            "@id": "https://themost.io/schemas/dateCreated",
+            "name": "dateCreated",
+            "title": "dateCreated",
+            "description": "The date on which this item was created.",
+            "type": "DateTime",
+            "readonly": true,
+            "value": "javascript:return new Date();"
+        }
+    ]
+}
